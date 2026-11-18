@@ -115,11 +115,13 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pcre2-10.49-he63d830_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pillow-13.0.0-py315hc1e0e8d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pixman-0.46.4-h784d473_3.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pkgconf-3.0.11-pkg_config_hf9333ed_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/psutil-7.2.2-py315h829fc9d_4.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pthread-stubs-0.4-hb001647_1004.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/python-3.15.2-h2e4dbab_100_cp315.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pyzmq-27.3.0-py312h6ba1a2d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/qhull-2020.2-h48a1422_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/scipy-1.18.1-py315h24941e9_3.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/tk-8.6.13-hbeba79b_4.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/tornado-6.6.1-py315h829fc9d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/wcwidth-0.9.4-py311h8794d7f_0.conda
@@ -1487,6 +1489,19 @@ packages:
     - pixman >=0.46.4,<1.0a0
   size: 198717
   timestamp: 1786106922508
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/pkgconf-3.0.11-pkg_config_hf9333ed_0.conda
+  sha256: dee4edfd06e9d52149482aa72fa8c5c3d23a9bb4a54e7026257ed4cec03dfff3
+  md5: 44ac139652c547416041f8275b44771d
+  depends:
+  - __osx >=11.0
+  constrains:
+  - pkg-config <0a0
+  license: MIT
+  run_exports:
+    weak:
+    - pkgconf >=3.0.11,<4.0a0
+  size: 129314
+  timestamp: 1794734138938
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/psutil-7.2.2-py315h829fc9d_4.conda
   sha256: 275f147eb699c00204babf1e06d6e19c315ec70e5963223078d7c9fceb1f7dcc
   md5: 2845ad447b7801b97008f970dfc6de90
@@ -1565,6 +1580,28 @@ packages:
     - qhull >=2020.2,<2020.3.0a0
   size: 518464
   timestamp: 1793908704413
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/scipy-1.18.1-py315h24941e9_3.conda
+  sha256: 3a9c6fd8161f1ddac36ec09406a5d35f24d9601884da2f8085d9522d65612128
+  md5: fd70652f3d3be55ae4e9291a2e9f5591
+  depends:
+  - python
+  - numpy <2.8
+  - numpy >=2.0.0
+  - libgfortran5 >=15.3.0
+  - libgfortran
+  - libgcc >=15
+  - libcxx >=21
+  - __osx >=11.0
+  - python_abi 3.15.* *_cp315
+  - liblapack >=3.9.0,<4.0a0
+  - libcblas >=3.9.0,<4.0a0
+  - pkgconf >=3.0.11,<4.0a0
+  - numpy >=1.25,<3
+  - libblas >=3.9.0,<4.0a0
+  license: BSD-3-Clause
+  run_exports: {}
+  size: 14726402
+  timestamp: 1794833044491
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/tk-8.6.13-hbeba79b_4.conda
   sha256: 857d89087ae7f2c328cf256728affcb7343031a148b4af847334d248a9cf564c
   md5: 90a01bf394d1c594e0eb9258f967d828
